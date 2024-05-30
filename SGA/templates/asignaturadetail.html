@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Detalle de asignatura
+{% endblock %}
+
+{% block contenido %}
+    <h1>Informacion de asignatura</h1>
+    <h2>{{ asignatura }}</h2>
+    <table>
+        <tr>
+            <td>Nombre</td>
+            <td>{{ asignatura.nombre }}</td>
+        </tr>
+        <tr>
+            <td>Codigo</td>
+            <td>{{ asignatura.codigo }}</td>
+        </tr>
+        <tr>
+            <td>aa</td>
+            <td>{{ asignatura.aa }}</td>
+        </tr>
+        <tr>
+            <td>acd</td>
+            <td>{{ asignatura.acd }}</td>
+        </tr>
+        <tr>
+            <td>ape</td>
+            <td>{{ asignatura.ape }}</td>
+        </tr>
+        <tr>
+            <td>ciclo</td>
+            <td>{{ asignatura.ciclo }}</td>
+        </tr>
+    </table>
+{% endblock %}

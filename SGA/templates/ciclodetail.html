@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Detalle de ciclo
+{% endblock %}
+
+{% block contenido %}
+    <h1>Informacion de ciclo</h1>
+    <h2>{{ ciclo }}</h2>
+    <table>
+        <tr>
+            <td>Nombre</td>
+            <td>{{ ciclo.nombre }}</td>
+        </tr>
+        <tr>
+            <td>Codigo</td>
+            <td>{{ ciclo.codigo }}</td>
+        </tr>
+        <tr>
+            <td>Facultad</td>
+            <td>{{ ciclo.facultad }}</td>
+        </tr>
+    </table>
+{% endblock %}

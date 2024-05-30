@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Ciclos
+{% endblock  %}
+
+{% block contenido %}
+    <h1>Ciclos</h1>
+    <ul>
+        {% for ciclo in ciclos %}
+            <li>
+                {{ ciclos.nombre }} - {{ ciclos.carera }} - {{ ciclos.facultad }}
+                 <a href="{% url 'ciclo' id=ciclo.id %}">
+                    Ver
+                 </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}ck %}

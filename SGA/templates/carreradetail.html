@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Detalle de carrera
+{% endblock %}
+
+{% block contenido %}
+    <h1>Informacion de carrera</h1>
+    <h2>{{ carrera }}</h2>
+    <table>
+        <tr>
+            <td>Nombre</td>
+            <td>{{ carrera.nombre }}</td>
+        </tr>
+        <tr>
+            <td>Codigo</td>
+            <td>{{ carrera.codigo }}</td>
+        </tr>
+        <tr>
+            <td>Titulo</td>
+            <td>{{ carrera.titulo }}</td>
+        </tr>
+        <tr>
+            <td>Facultad</td>
+            <td>{{ carrera.facultad }}</td>
+        </tr>
+    </table>
+{% endblock %}

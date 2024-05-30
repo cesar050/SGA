@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block titulo %}
+    Facultades
+{% endblock %}
+
+{% block contenido %}
+    <h2>Lista de facultades</h2>
+    <ul class="list-group" >
+        {% for facultad in facultades %}
+            <li class="list-group-item">
+                {{ facultad.nombre }}
+                <ul>
+                    {% for carrera in facultad.carrerasList.all %}
+                        <li>{{ carrera }}</li>
+                    {% endfor %}
+                </ul>
+                    <a  type="button" class="btn btn-success" href="{% url 'addCarrera' %}">
+                        Agregar carrera
+                    </a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a type="button" class="btn btn-primary" href="{% url 'addFacultad' %}">
+                Agregar Facultad
+            </a>
+{% endblock %}

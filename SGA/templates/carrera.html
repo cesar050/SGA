@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Carreras
+{% endblock  %}
+
+{% block contenido %}
+    <h1>Lista de carreras</h1>
+    <ul>
+        {% for carrera in carreras %}
+            <li>
+                {{ carrera.nombre }} - {{ carrera.facultad }}
+                 <a href="{% url 'carrera' id=carrera.id %}">
+                    Ver
+                 </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
